@@ -1,0 +1,232 @@
+<!-- 
+DOCTYPE digunakan untuk memberi tahu browser bahwa dokumen ini menggunakan HTML5 
+Ini penting agar browser merender halaman dengan standar terbaru
+-->
+<!DOCTYPE html>
+
+<!-- 
+Elemen root dari HTML, semua konten harus berada di dalam tag <html>
+Atribut lang="id" (disarankan) untuk memberi tahu bahasa halaman (aksesibilitas & SEO)
+-->
+<html lang="id">
+
+<!-- ===================== BAGIAN HEAD ===================== -->
+<head>
+    <!-- 
+    Metadata dasar halaman web 
+    Tidak ditampilkan langsung ke user, tapi penting untuk browser dan mesin pencari
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO dasar -->
+    <meta name="description" content="Profil Kota Banda Aceh meliputi sejarah, geografis, dan wisata.">
+    <meta name="keywords" content="Banda Aceh, sejarah, wisata, geografis, Aceh">
+    <meta name="author" content="Prodi PTI">
+    <!-- Judul halaman yang tampil di tab browser -->
+    <title>Profil Banda Aceh</title>
+
+    <!-- 
+    Menghubungkan file CSS eksternal 
+    rel="stylesheet" artinya file ini adalah stylesheet
+    href menunjuk lokasi file CSS
+    -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/home.css">
+</head>
+
+<!-- ===================== BAGIAN BODY ===================== -->
+<!-- Semua konten yang terlihat oleh pengguna ada di dalam <body> -->
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<!-- 
+<header> adalah elemen semantic HTML5 
+Digunakan untuk bagian atas halaman, biasanya berisi judul, logo, dan navigasi
+-->
+<header>
+
+    <!-- 
+    div digunakan untuk grouping (pengelompokan)
+    class="jumbotron" biasanya digunakan untuk tampilan hero/banner besar
+    -->
+    <div class="jumbotron">
+        <h1>Banda Aceh</h1>
+        <!-- paragraf deskripsi -->
+        <p>
+            Banda Aceh adalah ibu kota Provinsi Aceh, daerah yang dikenal kukuh menjaga tradisi religius bernuansa Islami sehingga mendapatkan julukan Kota Madani.
+        </p>
+    </div>
+
+    <!-- 
+    <nav> adalah elemen semantic untuk navigasi menu
+    -->
+    <nav>
+        <!-- 
+        <ul> = unordered list (list tanpa nomor)
+        Digunakan untuk menu navigasi
+        -->
+        <ul>
+            <!-- 
+            <a href="#sejarah"> berarti link menuju elemen dengan id="sejarah"
+            Ini disebut internal link (anchor link)
+            -->
+            <li><a href="#sejarah">Sejarah</a></li>
+            <li><a href="#geografis">Geografis</a></li>
+            <li><a href="#wisata">Wisata</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ===================== MAIN CONTENT ===================== -->
+<!-- 
+<main> adalah elemen utama isi halaman
+Hanya boleh ada satu <main> dalam satu halaman
+-->
+<main>
+
+    <!-- 
+    div sebagai container utama konten
+    -->
+    <div id="content">
+
+        <!-- ===================== ARTICLE 1 ===================== -->
+        <!-- 
+        <article> digunakan untuk konten mandiri (independen)
+        Cocok untuk artikel, berita, blog, dll
+        -->
+        <article class="card">
+            <h2 id="sejarah">Sejarah</h2>
+
+            <!-- 
+            <img> untuk menampilkan gambar
+            alt penting untuk aksesibilitas & SEO
+            -->
+            <img src="assets/image/mesjidraya.jpg" alt="sejarah" class="featured-image" loading="lazy">
+
+            <p>...</p>
+        </article>
+
+        <!-- ===================== ARTICLE 2 ===================== -->
+        <article class="card">
+            <h2 id="geografis">Geografis</h2>
+            <img src="assets/image/geografisbaceh.jpeg" alt="geografis" class="featured-image" loading="lazy">
+
+            <p>...</p>
+        </article>
+
+        <!-- ===================== ARTICLE 3 ===================== -->
+        <article class="card">
+            <h2 id="wisata">Wisata</h2>
+
+            <!-- 
+            <section> digunakan untuk membagi bagian dalam artikel
+            -->
+            <section>
+                <h3>Pantai Lampuuk</h3>
+                <img src="assets/image/lampuuk.jpg" alt="Pantai Lampuuk" class="featured-image" loading="lazy">
+                <p>...</p>
+            </section>
+
+            <section>
+                <h3>Pantai Pasir Putih</h3>
+                <img src="assets/image/pasirputih.webp" alt="Pantai Pasir Putih" class="featured-image" loading="lazy">
+                <p>...</p>
+            </section>
+        </article>
+    </div>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <!-- 
+    <aside> digunakan untuk konten samping (sidebar)
+    Biasanya berisi informasi tambahan
+    -->
+    <aside>
+
+        <!-- article di dalam aside -->
+        <article class="profile card">
+
+            <!-- header dalam article -->
+            <header>
+                <h2>Kota Banda Aceh</h2>
+                <p>Kota Madani Berbasis Syariat Islam</p>
+
+                <!-- 
+                <figure> untuk grouping gambar + caption
+                -->
+                <figure>
+                    <img src="assets/image/bandaaceh.png" loading="lazy">
+                    <figcaption>Lambang</figcaption>
+                </figure>
+            </header>
+
+            <!-- section untuk info tambahan -->
+            <section>
+                <h3>Informasi Lainnya</h3>
+
+                <!-- 
+                <table> untuk menampilkan data tabular
+                -->
+                <table>
+                    <tr>
+                        <th>Negara</th>
+                        <td>Indonesia</td>
+                    </tr>
+                    <tr>
+                        <th>Hari jadi</th>
+                        <td>22 April 1205</td>
+                    </tr>
+                    <tr>
+                        <th>Luas Total</th>
+                        <!-- 
+                        <sup> untuk pangkat (superscript)
+                        -->
+                        <td>167.67 km<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <th>Bahasa Daerah</th>
+                        <td>Aceh</td>
+                    </tr>
+                    <tr>
+                        <th>Kode Telepon</th>
+                        <td>0651</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+    </aside>
+
+    <!-- ===================== SIDEBAR 2 ===================== -->
+    <aside>
+        <article class="profile card">
+            <header>
+                <h2>Pj. Walikota Banda Aceh</h2>
+                <p>Periode 2023-2024</p>
+
+                <figure>
+                    <img src="assets/image/walkot.jpg" loading="lazy">
+                    <figcaption>Amiruddin SE MSi</figcaption>
+                </figure>
+            </header>
+        </article>
+    </aside>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<!-- 
+<footer> digunakan untuk bagian bawah halaman
+Biasanya berisi copyright, kontak, dll
+-->
+<footer>
+    <p>Belajar Dasar Pemrograman Web &#169; 2024, Prodi PTI</p>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<!-- 
+Menghubungkan file JavaScript eksternal
+Diletakkan di akhir agar loading HTML lebih cepat
+-->
+<script src="assets/script.js"></script>
+
+</body>
+</html>
